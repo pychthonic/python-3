@@ -7,10 +7,10 @@ class loginSession:
 
     """This program demonstrates the principles behind password hashing, that is, 
     how computers authenticate users. Instead of keeping databases full of 
-    passwords, which would be an obvious target for roving botnets, they store 
-    hashes of the passwords. When a user enters their password, the computer 
-    makes a hash of that password and compares it to its stored hash for the user. 
-    If the two hashes match, the user is authenticated. A hash is an irreversible 
+    passwords, which would be an obvious target for roving botnets, they often store 
+    hashes of the passwords. When a user enters their password, the computer makes 
+    a hash of that password and compares it to its stored hash for the user. If the 
+    two hashes match, the user is authenticated. A hash is an irreversible 
     algorithm - it takes a string of characters (the password), and scrambles it 
     into a long string of what look like random characters called the hash. You 
     can always get the hash if you have the password (you can use sha256 to 
