@@ -28,6 +28,10 @@ class loginSession:
     'hashes.archive'. That file contains hashes of the usernames and passwords that 
     are created through the program, so someone who opens the file can only see how 
     many people have created accounts, and nothing more.
+   
+    It uses regular expressions to make sure the created usernames are letters, 
+    numbers, and underscores, and that passwords contain at least one lowercase 
+    letter, one uppercase letter, one number, and one of these symbols: !@#$%^&*()
     
     One goal to work on for this project is to import the os module and give an admin
     user some options, such as changing the permission bits of the hash archive, or 
