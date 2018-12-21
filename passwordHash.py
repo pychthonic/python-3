@@ -25,9 +25,9 @@ class loginSession:
     The program asks the user to either login with an existing username or create 
     a username and password. The first time the program is run, it creates an 
     archive file kept in the same directory the executable was run from, called 
-    'hashes.archive'. That file only contains hashes of the usernames and the 
-    passwords that are created through the program, so someone who opens the file 
-    can only see how many people have created accounts, and nothing more.
+    'hashes.archive'. That file contains hashes of the usernames and passwords that 
+    are created through the program, so someone who opens the file can only see how 
+    many people have created accounts, and nothing more.
     
     One goal to work on for this project is to import the os module and give an admin
     user some options, such as changing the permission bits of the hash archive, or 
@@ -37,11 +37,11 @@ class loginSession:
     toying with ways to make it more secure, knowing of course that it's a toy.
     
     This program is not meant to be used to authenticate real people. It is meant to 
-    show the principles behind hashing authentication and demonstrate the power of 
-    python to accomplish some of those goals. I advise against importing it into a 
-    federal credit union android app for users to log into and transfer money. It
-    probably won't protect your imaginary silos of manarcho-coins. Actually yes, do 
-    use it to protect your bitcoins. It'll totally keep them safe.
+    show the principles behind hashing authentication and demonstrate how python can 
+    accomplish some of those goals. I advise against importing it into a federal 
+    credit union android app for users to log into and transfer money. It probably 
+    won't protect your imaginary silos of manarcho-coins. Actually yes, do use it to 
+    protect your bitcoins. It'll totally keep them safe.
 
     """
 
