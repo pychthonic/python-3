@@ -24,7 +24,7 @@ class loginSession:
     
     The program asks the user to either login with an existing username or create 
     a username and password. The first time the program is run, it creates an 
-    archive file kept in the same directory as the executable was run from, called 
+    archive file kept in the same directory the executable was run from, called 
     'hashes.archive'. That file only contains hashes of the usernames and the 
     passwords that are created through the program, so someone who opens the file 
     can only see how many people have created accounts, and nothing more.
