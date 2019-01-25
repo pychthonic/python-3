@@ -16,7 +16,7 @@ rid of any unnecessary lines and making it object-oriented.
 nums1to19 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', \
         'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
 
-numsTens = ['zero', 'ten', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+numsTens = ['zero', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 
 placevalues1 = ['', 'thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', \
         'septillion', 'octillion', 'nonillion', 'decillion']
@@ -25,6 +25,8 @@ placevalues2 = ['', 'un', 'duo', 'tre', 'quattuor', 'quin', 'sex', 'septen', 'oc
 
 placevalues3 = ['', 'decillion', 'vigintillion', 'trigintillion', 'quadragintillion', 'quinquagintillion', 'sexagintillion', 'septuagintillion', 'octogintillion', 'nonagintillion']
 
+
+
 def makeOrdinal(numstr):
     if numstr[-3:] == 'one':
         numstr = numstr[:-3] + 'first'
@@ -32,6 +34,8 @@ def makeOrdinal(numstr):
         numstr = numstr[:-3] + 'second'
     elif numstr[-5:] == 'three':
         numstr = numstr[:-5] + 'third'
+    elif numstr[-4:] == 'four':
+        numstr = numstr[:-4] + 'forth'
     elif numstr[-4:] == 'five':
         numstr = numstr[:-4] + 'fifth'
     elif numstr[-5:] == 'eight':
@@ -78,6 +82,9 @@ def getordnum(number):
             finalnumber = threeDigNumber + " " + placevalues1[placevalposition] + ' ' + finalnumber
         elif ( placevalposition > 0 ) and ( placevalposition < 101 ):
             finalnumber = threeDigNumber + " " + placevalues2[placevalposition % 10 - 1] + placevalues3[(placevalposition - 1 ) // 10] + ' ' + finalnumber
+        elif ( placevalposition > 0 ) and ( placevalposition < 111 ):
+            finalnumber = threeDigNumber + " " + "cen" + placevalues2[placevalposition % 10 - 1] + "tillion" + ' ' + finalnumber
+
         else:
             finalnumber = threeDigNumber
         placevalposition += 1
@@ -94,12 +101,13 @@ def getordnum(number):
     finalnumber = makeOrdinal(finalnumber)
     return finalnumber
 
+if __name__ == "__main__":
 
-numb0r = input("Enter a number to ordinalize: ")
+    numb0r = input("Enter a number to ordinalize: ")
 
-ordnum = getordnum(numb0r)
+    ordnum = getordnum(numb0r)
 
-print("\n" + numb0r, ":", ordnum)
+    print("\n" + numb0r, ":", ordnum)
 
  
        
