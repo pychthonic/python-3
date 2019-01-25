@@ -1,5 +1,5 @@
 """ 
-This program takes a number input from the user and converts it into an ordinal number.
+This program takes an integer input from the user and converts it into an ordinal number.
 For example, if 1256 is input, the program outputs 'one thousand fifty-six'.
 It will take numbers up to 999,999,999,999,999,999,999,999
 Next steps will be tightening it up, getting rid of any unnecessary lines and making it object-oriented.
