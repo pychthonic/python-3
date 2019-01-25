@@ -14,7 +14,8 @@ nums1to19 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eig
 
 numsTens = ['zero', 'ten', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 
-placevalues = ['', 'thousand', 'million', 'billion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion', 'decillion']
+placevalues = ['', 'thousand', 'million', 'billion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', \
+               'octillion', 'nonillion', 'decillion']
 
 def makeOrdinal(numstr):
     if numstr[-3:] == 'one':
