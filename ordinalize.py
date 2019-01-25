@@ -16,8 +16,11 @@ nums1to19 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eig
 
 numsTens = ['zero', 'ten', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 
-placevalues = ['', 'thousand', 'million', 'billion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', \
+placevalues1 = ['', 'thousand', 'million', 'billion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', \
                'octillion', 'nonillion', 'decillion']
+
+placevalues2 = ['un', 'duo', 'tre', 'quattuor', 'quin', 'sex', 'septen', 'octo', 'novem']
+
 
 def makeOrdinal(numstr):
     if numstr[-3:] == 'one':
@@ -73,7 +76,7 @@ def getordnum(number):
             threezeros = True
         elif ( placevalposition > 0 ):
 
-            finalnumber = threeDigNumber + " " + placevalues[placevalposition] + ' ' + finalnumber
+            finalnumber = threeDigNumber + " " + placevalues1[placevalposition] + ' ' + finalnumber
         else:
             finalnumber = threeDigNumber
         placevalposition += 1
