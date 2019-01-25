@@ -1,4 +1,6 @@
 """ 
+Update: Program takes numbers up to (1 centillion - 1), i.e. ((1000^101) minus 1). Working 
+toward infinity...
 
 This program takes an integer input from the user and converts it into an ordinal number.
 For example, if 1256 is input, the program outputs 'one thousand two hundred fifty-sixth'.
@@ -16,11 +18,12 @@ nums1to19 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eig
 
 numsTens = ['zero', 'ten', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 
-placevalues1 = ['', 'thousand', 'million', 'billion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', \
-               'octillion', 'nonillion', 'decillion']
+placevalues1 = ['', 'thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', \
+        'septillion', 'octillion', 'nonillion', 'decillion']
 
-placevalues2 = ['un', 'duo', 'tre', 'quattuor', 'quin', 'sex', 'septen', 'octo', 'novem']
+placevalues2 = ['', 'un', 'duo', 'tre', 'quattuor', 'quin', 'sex', 'septen', 'octo', 'novem']
 
+placevalues3 = ['', 'decillion', 'vigintillion', 'trigintillion', 'quadragintillion', 'quinquagintillion', 'sexagintillion', 'septuagintillion', 'octogintillion', 'nonagintillion']
 
 def makeOrdinal(numstr):
     if numstr[-3:] == 'one':
@@ -40,8 +43,6 @@ def makeOrdinal(numstr):
     else:
         numstr = numstr + 'th'
     return numstr
-
-
 
 def get2DigNum (twodignum):
     if twodignum < 20:
@@ -64,7 +65,6 @@ def get3DigNum (threedignum):
             num = nums1to19[threedignum // 100] + ' hundred ' + get2DigNum(threedignum % 100)
     return num
 
-
 def getordnum(number):
     placevalposition = 0
     finalnumber = ""
@@ -74,9 +74,10 @@ def getordnum(number):
         threeDigNumber = get3DigNum(threeDigNumber)
         if ( placevalposition > 0 ) and ( threeDigNumber == 'zero' ):
             threezeros = True
-        elif ( placevalposition > 0 ):
-
+        elif ( placevalposition > 0 ) and ( placevalposition < 12 ):
             finalnumber = threeDigNumber + " " + placevalues1[placevalposition] + ' ' + finalnumber
+        elif ( placevalposition > 0 ) and ( placevalposition < 101 ):
+            finalnumber = threeDigNumber + " " + placevalues2[placevalposition % 10 - 1] + placevalues3[(placevalposition - 1 ) // 10] + ' ' + finalnumber
         else:
             finalnumber = threeDigNumber
         placevalposition += 1
