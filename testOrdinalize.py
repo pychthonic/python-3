@@ -11,7 +11,6 @@ punctuation, checks whether the two strings are equal, and lets the user know ei
 For now it will be used to check my progress toward infinity but when I hammer out the kinks
 in ordinalize.py I'll do the same for this guy.
 
-
 """
 
 num = input("Enter a number: ")
@@ -46,7 +45,7 @@ print("\nUsing Requests to consult the web, we get:\n" + numFromWeb + '\n')
 if numFromOrdinalize == numFromWeb:
     print("\nWe have a match on our hands people!!\n")
 else:
-    print("\nSomethings at least a little off...\n")
+    print("\nSomething's at least a little off...\n")
 
 
 
