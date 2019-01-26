@@ -1,10 +1,10 @@
 """ 
 Update: Program takes numbers up to at least 10 ^ 600 (ish?). The web site I was using 
-to test the output against using requests stopped letting me enter numbers that as a 
-preventative measure against buffer overflow attacks. Next step today is find another web
-site that allows bigger numbers to be input or another way to check the output, which at
-this point is too big to painstakingly go through and check every word. I'm going to find
-a way to take this thing to infinity though. No question.
+to test the output against using requests stopped allowing me to enter numbers that large
+as a  preventative measure against buffer overflow attacks. Next step today is find 
+another website that allows bigger numbers to be input or another way to check the output, 
+which at this point is too big to painstakingly go through and check every word. I'm going 
+to find a way to take this thing to infinity though. No question.
 
 This program takes an integer input from the user and converts it into an ordinal number.
 For example, if 1256 is input, the program outputs 'one thousand two hundred fifty-sixth'.
