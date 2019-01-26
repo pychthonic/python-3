@@ -39,13 +39,6 @@ class loginSession:
     the archive file more integrity, that is to say, give the user a small bit more 
     certainty that the archive file is the same one it's sposed to be, basically 
     toying with ways to make it more secure, knowing of course that it's a toy.
-    
-    This program is not meant to be used to authenticate real people. It is meant to 
-    show the principles behind hashing authentication and demonstrate how python can 
-    accomplish some of those goals. I advise against importing it into a federal 
-    credit union android app for users to log into and transfer money. It probably 
-    won't protect your imaginary silos of manarcho-coins. Actually yes, do use it to 
-    protect your bitcoins. It'll totally keep them safe.
 
     """
 
