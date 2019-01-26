@@ -1,10 +1,10 @@
 """ 
-Update: Program takes numbers up to (1 centillion - 1), i.e. ((1000^101) minus 1). Working 
+Update: Program takes numbers up to 1 duocentillion minus 1, i.e. ((1000^201) - 1). Working 
 toward infinity...
 
 This program takes an integer input from the user and converts it into an ordinal number.
 For example, if 1256 is input, the program outputs 'one thousand two hundred fifty-sixth'.
-It will take numbers up to 999,999,999,999,999,999,999,999
+It will take numbers up to......
 Next steps will be making it theoretically count up to infinity, tightening it up, getting 
 rid of any unnecessary lines and making it object-oriented.
 
@@ -87,6 +87,10 @@ def getordnum(number):
         elif ( placevalposition > 0 ) and ( placevalposition < 111 ):
             finalnumber = threeDigNumber + " " + "cen" + placevalues2[placevalposition % 10 - 1] + \
                     "tillion" + ' ' + finalnumber
+        elif ( placevalposition > 0 ) and ( placevalposition < 1000 ):
+            finalnumber = threeDigNumber + " " + "cen" + placevalues2[placevalposition % 10 - 1] + \
+                    placevalues3[(placevalposition - 101) // 10] + ' ' + finalnumber
+
 
         else:
             finalnumber = threeDigNumber
