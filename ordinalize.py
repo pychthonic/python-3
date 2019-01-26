@@ -23,7 +23,8 @@ placevalues1 = ['', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
 
 placevalues2 = ['', 'un', 'duo', 'tre', 'quattuor', 'quin', 'sex', 'septen', 'octo', 'novem']
 
-placevalues3 = ['', 'decillion', 'vigintillion', 'trigintillion', 'quadragintillion', 'quinquagintillion', 'sexagintillion', 'septuagintillion', 'octogintillion', 'nonagintillion']
+placevalues3 = ['', 'decillion', 'vigintillion', 'trigintillion', 'quadragintillion', 'quinquagintillion', \
+        'sexagintillion', 'septuagintillion', 'octogintillion', 'nonagintillion']
 
 
 
@@ -81,9 +82,11 @@ def getordnum(number):
         elif ( placevalposition > 0 ) and ( placevalposition < 12 ):
             finalnumber = threeDigNumber + " " + placevalues1[placevalposition] + ' ' + finalnumber
         elif ( placevalposition > 0 ) and ( placevalposition < 101 ):
-            finalnumber = threeDigNumber + " " + placevalues2[placevalposition % 10 - 1] + placevalues3[(placevalposition - 1 ) // 10] + ' ' + finalnumber
+            finalnumber = threeDigNumber + " " + placevalues2[placevalposition % 10 - 1] + \
+                    placevalues3[(placevalposition - 1 ) // 10] + ' ' + finalnumber
         elif ( placevalposition > 0 ) and ( placevalposition < 111 ):
-            finalnumber = threeDigNumber + " " + "cen" + placevalues2[placevalposition % 10 - 1] + "tillion" + ' ' + finalnumber
+            finalnumber = threeDigNumber + " " + "cen" + placevalues2[placevalposition % 10 - 1] + \
+                    "tillion" + ' ' + finalnumber
 
         else:
             finalnumber = threeDigNumber
