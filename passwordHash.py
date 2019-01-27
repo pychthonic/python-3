@@ -102,8 +102,8 @@ class loginSession:
         except FileNotFoundError:
     
             print("\nNo hashes.archive file was found because you haven't made your first account yet. "
-            "When that happens, a file will be created called hashes.archive to store login & password "
-            "hashes (not the logins and passwords themselves).\n")
+            "When that happens, a file will be created called hashes.archive to store username & "
+            "password hashes (not the usernames and passwords themselves).\n")
 
     def isValidLogin(self, loginString):
         if re.match('^[a-zA-Z0-9_]+$', loginString):

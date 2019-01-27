@@ -1,14 +1,10 @@
 """ 
-Update: Program takes numbers up to at least 1000 ^ 1000 (ish?). The web site I was using 
-to test the output against using requests stopped allowing me to enter numbers this large
-as a  preventative measure against buffer overflow attacks. No websites that I could 
-find let the user enter numbers higher than about 1000 ^ 600, and I could only find one 
-program on the internet that does what this one does and it's a perl script. So once I get 
-this thing running, I'll make the testOrdinalize.py script run the perl script instead of 
-using Requests once the numbers get too big.
-
-It's rough around the edges but goals for tomorrow are getting it to work to infinity and 
-then paring it down.
+Update: Program takes numbers up to at least 10 ^ 600 (ish?). The web site I was using 
+to test the output against using requests stopped allowing me to enter numbers that large
+as a  preventative measure against buffer overflow attacks. Next step today is find 
+another website that allows bigger numbers to be input or another way to check the output, 
+which at this point is too big to painstakingly go through and check every word. I'm going 
+to find a way to take this thing to infinity though. No question.
 
 This program takes an integer input from the user and converts it into an ordinal number.
 For example, if 1256 is input, the program outputs 'one thousand two hundred fifty-sixth'.
@@ -119,21 +115,23 @@ def get100to1000powerstr(placevalue):
     return string
 
 def get0to1000powerstr(placevalue):
-    if ( placevalue == 0 ):
-        return ''
-    elif ( placevalue > 0 ) and ( placevalue < 12 ):
-        returnNumber =  placevalues1[placevalue] + ' ' + \
+    threeDigNumber = int(number[-3:])
+        threeDigNumber = get3DigNum(threeDigNumber)
+        if ( placevalposition > 0 ) and ( threeDigNumber == 'zero' ):
+            threezeros = True
+        elif ( placevalposition > 0 ) and ( placevalposition < 12 ):
+            finalnumber = threeDigNumber + " " + placevalues1[placevalposition] + ' ' + \
                     finalnumber
-    elif ( placevalposition > 0 ) and ( placevalposition < 101 ):
-        finalnumber = threeDigNumber + " " + placevalues2[placevalposition % 10 - 1] + \
+        elif ( placevalposition > 0 ) and ( placevalposition < 101 ):
+            finalnumber = threeDigNumber + " " + placevalues2[placevalposition % 10 - 1] + \
                     placevalues3[(placevalposition - 1 ) // 10] + ' ' + finalnumber
-        print ("placevalposition: " + str(placevalposition) + ' -- ' + \
+            print ("placevalposition: " + str(placevalposition) + ' -- ' + \
                     placevalues2[placevalposition % 10 - 1] + \
                     placevalues3[(placevalposition - 1) // 10])
-    elif ( placevalposition > 0 ) and ( placevalposition < 1000 ):
-        finalnumber = threeDigNumber + " " + get100to1000powerstr(placevalposition) + \
+        elif ( placevalposition > 0 ) and ( placevalposition < 1000 ):
+            finalnumber = threeDigNumber + " " + get100to1000powerstr(placevalposition) + \
                     ' ' + finalnumber
-        print("placevalposition: " + str(placevalposition) + ' -- ' + \
+            print("placevalposition: " + str(placevalposition) + ' -- ' + \
                     get100to1000powerstr(placevalposition))
 
 
