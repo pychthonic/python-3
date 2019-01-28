@@ -26,7 +26,7 @@ placevalues2 = ['', 'un', 'duo', 'tre', 'quattuor', 'quin', 'sex', 'septen', 'oc
 
 placevalues3 = ['tillion', 'decillion', 'vigintillion', 'trigintillion', 'quadragintillion', \
         'quinquagintillion', 'sexagintillion', 'septuagintillion', 'octogintillion', \
-        'nonagintillion']   # note: added 'tillion' to 0 index here --> update other parts of code
+        'nonagintillion']
 
 placevalues4 = ['', 'cen', 'duocen', 'trecen', 'quadringen', 'quingen', 'sescen', \
         'septingen', 'octingen', 'nongen']
