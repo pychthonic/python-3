@@ -1,7 +1,7 @@
 import requests, re
 
 """
-I wrote this script as a response to a stackexchange question and decided to post it here since 
+I wrote this script as a response to a stackoverflow question and decided to post it here since 
 it's kinda nifty. It opens up a file with a list of celebrity names (found in this repository as 
 "instagramNameSearchList.txt" and uses the requests module and Bing to search for their public 
 instagram accounts. It then uses regular expressions to parse the returned packet for the link 
