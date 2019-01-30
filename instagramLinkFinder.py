@@ -1,16 +1,13 @@
 import requests, re
 
 """
-
 I wrote this script as a response to a stackexchange question and decided to post it here since 
 it's kinda nifty. It opens up a file with a list of celebrity names (found in this repository as 
 "instagramNameSearchList.txt" and uses the requests module and Bing to search for their public 
 instagram accounts. It then uses regular expressions to parse the returned packet for the link 
 and prints it to the screen.
 
-
 """
-
 
 
 def bingsearch(searchfor):                                                                                                                                                                                       
@@ -26,9 +23,7 @@ def bingsearch(searchfor):
     except AttributeError:
         iglink = "link not found"
 
-
     return iglink
-
 
 
 with open("instagramNameSearchList.txt", "r") as f:
