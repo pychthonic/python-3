@@ -22,12 +22,12 @@ def bingsearch(searchfor):
 
     try:
         found = re.search('Search Results(.+?)</a>', response.text).group(1)
+        iglink = re.search('a href="(.+?)"', found).group(1)
     except AttributeError:
-        print("link not found")
+        iglink = "link not found"
 
-    linkfound = re.search('a href="(.+?)"', found).group(1)
 
-    return linkfound
+    return iglink
 
 
 
