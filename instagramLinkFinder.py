@@ -5,15 +5,13 @@ import requests
 
 
 class InstagramList:
-    
-    """Opens a text file containing a list of celebrity names (one name 
-    per line), then uses Bing to find their public instagram profile 
-    links, puts the links in a list, and provides a function to print 
+    """Opens a text file containing a list of celebrity names (one name
+    per line), then uses Bing to find their public instagram profile
+    links, puts the links in a list, and provides a function to print
     the links out.
     """
-    
     def __init__(self, filename):
-        # Creates list of names found in filename text file 
+        # Creates list of names found in filename text file
         self.filename = filename
         self.bing_search_link_list = []
         self.ig_link_list = []
@@ -33,9 +31,9 @@ class InstagramList:
             self.bing_search_link_list.append(bing_search_link)
 
     def bing_search(self):
-        """Sends HTTP request packets to the list of bing search URLs 
+        """Sends HTTP request packets to the list of bing search URLs
         from get_bing_search_link_list() and uses regular expressions to
-        parse the response packets for the public Instagram link. 
+        parse the response packets for the public Instagram link.
         Creates list of these links called ig_link_list.
         """
         if not self.bing_search_link_list:
