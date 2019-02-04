@@ -1,17 +1,15 @@
 import requests, re, sys
 
-"""
-I wrote this script as a response to a stackoverflow question and 
-decided to post it here since it's kinda nifty. It opens up a file with 
-a list of celebrity names (found in this repository as 
-"instagramNameSearchList.txt" and uses the requests module and Bing to 
-search for their public instagram accounts. It then uses regular 
-expressions to parse the returned packet for the link and prints it to 
-the screen.
-
-"""
 
 class InstagramList:
+
+    """
+
+    Opens a text file containing a list of celebrity names (one name per line), 
+    then uses Bing to find their public instagram profile links, puts the links 
+    in a list, and provides a function to print the links out.
+
+    """
 
     bingSearchLinkList = []
     igLinkList = []
