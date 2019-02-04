@@ -10,8 +10,8 @@ class InstagramList:
     per line), then uses Bing to find their public instagram profile 
     links, puts the links in a list, and provides a function to print 
     the links out.
-
     """
+    
     def __init__(self, filename):
         # Creates list of names found in filename text file 
         self.filename = filename
