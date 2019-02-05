@@ -1,11 +1,9 @@
 class OrdinalNumber:
     """Take any integer up to infinity and convert it to an ordinal number.
-
     For example, if 1256 is input, output will be 'one thousand two hundred
     fifty-sixth'. It will take any number up to as large as your computer 
-    will handle.
-
-    Seven lists of number name variables are used to make the conversion.
+    will handle. Seven lists of number name variables are used to make the 
+    conversion.
 
     Sidenote, as I pep8ify this code and make it object-oriented, I cannot
     believe I wrote this thing in Vim... my index and middle finger had
