@@ -3,18 +3,20 @@ class OrdinalNumber:
     ordinal number.
 
     For example, if 1256 is input, output will be 'one thousand two hundred
-    fifty-sixth'. It will take number up to as large as your computer will
-    handle.
+    fifty-sixth'. It will take any number up to as large as your computer 
+    will handle.
 
-    Seven lists of number name and place holder static variables are used
-    to make the conversion.
+    Seven lists of number name variables are used to make the conversion.
 
     Sidenote, as I pep8ify this code and make it object-oriented, I cannot
     believe I wrote this thing in Vim... my index and middle finger had
     to take turns on the mouse wheel moving the file view up and down
-    as I made it work over the course of...five days? When I started the
+    as I made it work over the course of five days. When I started the
     project I thought it would take a few hours. Next thing I knew it was
-    5 days later and I was still working on it.
+    5 days later and I was still working on it. But it works! And it's a 
+    beast. It handles page-long numbers like Joel Embiid handles disrespect.
+    Only thing it doesn't do is tweet shittalk at the numbers after it 
+    converts them.
 
     Throughout the script, "num" and "string" are used as local variables
     inside specific functions.
