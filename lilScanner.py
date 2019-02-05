@@ -54,8 +54,7 @@ class PortProbe:
         return result
 
     def print_open_ports(self):
-        """Prints the list of open ports.
-        """
+        """Prints the list of open ports."""
         if self.open_ports:
             print("\n\nOpen Ports: ", end="")
             for p in self.open_ports:
