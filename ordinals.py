@@ -187,6 +187,10 @@ class OrdinalNumber:
         return string
 
     def get_ord_number(self):
+        """This is the overarching function of the class, which eats the
+        number up and calls whichever function it needs as it does so.
+        It converts self.number to the ordinal self.final_number
+        """
         self.place_value_position = 0
         self.final_number = ""
         while (self.number):
