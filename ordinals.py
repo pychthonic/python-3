@@ -1,6 +1,5 @@
 class OrdinalNumber:
-    """Take any integer theoretically up to infinity and convert it to an
-    ordinal number.
+    """Take any integer up to infinity and convert it to an ordinal number.
 
     For example, if 1256 is input, output will be 'one thousand two hundred
     fifty-sixth'. It will take any number up to as large as your computer 
