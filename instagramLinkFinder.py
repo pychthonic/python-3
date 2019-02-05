@@ -62,7 +62,7 @@ class InstagramList:
 
 
 if __name__ == '__main__':
-    igList = InstagramList("instagramNameSearchList.txt")
-    igList.get_bing_search_link_list()
-    igList.bing_search()
-    igList.print_instagram_links()
+    ig_list = InstagramList("instagramNameSearchList.txt")
+    ig_list.get_bing_search_link_list()
+    ig_list.bing_search()
+    ig_list.print_instagram_links()
