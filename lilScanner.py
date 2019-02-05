@@ -15,8 +15,7 @@ class PortProbe:
         """Get IP address and port numbers to scan from user. Scan ports
         and put open ones into list open_ports. Print list open_ports.
         """
-        self.ip = input("\nEnter an ip address you have permission"
-                        " to scan: ")
+        self.ip = input("\nEnter an ip address you have permission to scan: ")
         self.start_port = int(input("\nEnter a port to start at, "
                                     "from 1-65534: "))
         self.end_port = int(input("\nStarting at port {} and scan up to "
@@ -29,9 +28,9 @@ class PortProbe:
             response = self.probe_port(port)
             if response == 0:
                 self.open_ports.append(port)
-                print("\n\nFound open port: ", port, "\n")
+                print("\nFound open port: ", port, "\n")
             else:
-                if len(sys.argv[2]) == 2:
+                if len(sys.argv) == 2:
                     if sys.argv[1] == '-v':
                         print(port, end=" ")
 
@@ -58,7 +57,7 @@ class PortProbe:
         if self.open_ports:
             print("\n\nOpen Ports: ", end="")
             for p in self.open_ports:
-                print(p)
+                print(p, end=' ')
         else:
             print("\n\nSorry, no open ports found.")
         print("")
