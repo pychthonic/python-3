@@ -4,3 +4,4 @@ env
 testfiles
 testingGarage
 
+__init__.py
