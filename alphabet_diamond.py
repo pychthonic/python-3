@@ -49,7 +49,7 @@ if __name__ == '__main__':
             "What letter would you like the alphabet diamond to go up to?"
             "\n Enter a-z for lowercase, A-Z for uppercase: ")
         if not letter.isalpha():
-            print("{} is not a letter.".format(letter))
+            print(f"{letter} is not a letter.")
         if len(letter) > 1:
             print("Singles only.")
     while len(outside_char) != 1:
