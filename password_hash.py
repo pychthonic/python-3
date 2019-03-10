@@ -73,8 +73,8 @@ class LoginSession:
 
             with open('hashes.archive', 'a') as self.password_file:
                 self.password_file.write(
-                    'login hash: {} : password hash: {}\n'.format(
-                        self.login_hash, self.password_hash))
+                    f"login hash: {self.login_hash} : "
+                    f"password hash: {self.password_hash}\n")
 
         try:
             with open('hashes.archive', 'r') as self.password_file:
@@ -103,8 +103,8 @@ class LoginSession:
                             break
                         else:
                             self.password_tries += 1
-                            print("Wrong password. {} more tries\n".format(
-                                3 - self.password_tries))
+                            print(f"Wrong password. {3 - self.password_tries}"
+                                  " more tries\n")
         except FileNotFoundError as err:
             print("\nNo hashes.archive file was found because you haven't "
                   "made your first account yet. When that happens, a file "
