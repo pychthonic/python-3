@@ -84,7 +84,7 @@ class LoginSession:
                     login_entry_line = line.split(':')
                     if login_entry_line[1].strip() == sha256(
                             self.login_name.encode()).hexdigest():
-                        print("Hello {}".format(self.login_name))
+                        print(f"Hello {self.login_name}")
                         self.found = True
                         break
 
