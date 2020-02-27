@@ -26,8 +26,8 @@ class InstagramList:
             name = name.strip().replace(" ", "+")
             search_term = name + "+instagram"
             bing_search_link = (
-                'https://www.bing.com''/search?q={}&ia=web'
-                ).format(search_term)
+                f'https://www.bing.com''/search?q={search_term}&ia=web'
+                )
             self.bing_search_link_list.append(bing_search_link)
 
     def bing_search(self):
